@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30657d8a-2641-4c50-bcfa-119c57b59862" name="Default" comment="" />
+    <list default="true" id="30657d8a-2641-4c50-bcfa-119c57b59862" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" afterPath="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/service/Main.java" afterPath="$PROJECT_DIR$/src/main/java/courses/service/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/department.xml" afterPath="$PROJECT_DIR$/src/main/resources/department.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Task11.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +73,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/courses/service/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1951" selection-end="1951" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+            <state line="19" column="37" selection-start="598" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
               <folding />
             </state>
           </provider>
@@ -76,7 +82,7 @@
       <file leaf-file-name="JaxbConverter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.30985916" vertical-offset="66" max-vertical-offset="1034">
+            <state line="22" column="69" selection-start="772" selection-end="772" vertical-scroll-proportion="0.43271223" vertical-offset="66" max-vertical-offset="1078">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,21 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployerDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/courses/dao/impl/EmployerDAOImpl.java">
+      <file leaf-file-name="department.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/department.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="16" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="4356">
-              <folding>
-                <marker date="1416261516331" expanded="true" signature="629:704" placeholder="INSERT INTO ..." />
-                <marker date="1416261516331" expanded="true" signature="1315:1402" placeholder="SELECT id FR..employer..." />
-                <marker date="1416261516331" expanded="true" signature="2102:2137" placeholder="SELECT * FRO..employer..." />
-                <marker date="1416261516331" expanded="true" signature="2958:3005" placeholder="SELECT depar..employer..." />
-                <marker date="1416261516331" expanded="true" signature="3578:3600" placeholder="SELECT * FRO..employer..." />
-                <marker date="1416261516331" expanded="true" signature="4315:4570" placeholder="SELECT e.id ..employer..." />
-                <marker date="1416261516331" expanded="true" signature="5408:5454" placeholder="SELECT * FRO..employer..." />
-                <marker date="1416261516331" expanded="true" signature="6219:6300" placeholder="UPDATE emplo..." />
-                <marker date="1416261516331" expanded="true" signature="6874:6907" placeholder="DELETE FROM ..." />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,6 +106,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -120,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/main/java/courses/dao/impl/DepartmentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/courses/entity/Department.java" />
         <option value="$PROJECT_DIR$/src/main/java/courses/entity/Employer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/courses/service/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" />
       </list>
     </option>
   </component>
@@ -138,7 +137,7 @@
     <option name="width" value="1845" />
     <option name="height" value="1121" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -368,6 +367,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="connector" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -387,6 +420,7 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -669,12 +703,12 @@
       <created>1416260768324</created>
       <updated>1416260768324</updated>
       <workItem from="1416260774152" duration="2450000" />
-      <workItem from="1416333773323" duration="6095000" />
+      <workItem from="1416333773323" duration="8062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8545000" />
+    <option name="totallyTimeSpent" value="10512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="31" width="1845" height="1121" extended-state="0" />
@@ -700,7 +734,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14997202" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296371" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27217743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -758,21 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/courses/dao/impl/DepartmentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.29545453" vertical-offset="0" max-vertical-offset="2926">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT id FR..department..." />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="UPDATE depar..." />
-            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="399" selection-end="399" vertical-scroll-proportion="0.20454545" vertical-offset="0" max-vertical-offset="968">
@@ -812,6 +831,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/courses/dao/impl/DepartmentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="955" selection-end="955" vertical-scroll-proportion="0.5010352" vertical-offset="330" max-vertical-offset="2926">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT id FR..department..." />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="UPDATE depar..." />
+            <marker date="1416261516318" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/courses/dao/impl/EmployerDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.27329192" vertical-offset="0" max-vertical-offset="4356">
+          <folding>
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT id FR..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT depar..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT e.id ..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employer..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="UPDATE emplo..." />
+            <marker date="1416261516331" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/department.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
@@ -819,33 +870,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/courses/dao/impl/EmployerDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="4356">
-          <folding>
-            <marker date="1416261516331" expanded="true" signature="629:704" placeholder="INSERT INTO ..." />
-            <marker date="1416261516331" expanded="true" signature="1315:1402" placeholder="SELECT id FR..employer..." />
-            <marker date="1416261516331" expanded="true" signature="2102:2137" placeholder="SELECT * FRO..employer..." />
-            <marker date="1416261516331" expanded="true" signature="2958:3005" placeholder="SELECT depar..employer..." />
-            <marker date="1416261516331" expanded="true" signature="3578:3600" placeholder="SELECT * FRO..employer..." />
-            <marker date="1416261516331" expanded="true" signature="4315:4570" placeholder="SELECT e.id ..employer..." />
-            <marker date="1416261516331" expanded="true" signature="5408:5454" placeholder="SELECT * FRO..employer..." />
-            <marker date="1416261516331" expanded="true" signature="6219:6300" placeholder="UPDATE emplo..." />
-            <marker date="1416261516331" expanded="true" signature="6874:6907" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/courses/service/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1951" selection-end="1951" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1870">
+        <state line="19" column="37" selection-start="598" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.30985916" vertical-offset="66" max-vertical-offset="1034">
+        <state line="22" column="69" selection-start="772" selection-end="772" vertical-scroll-proportion="0.43271223" vertical-offset="66" max-vertical-offset="1078">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

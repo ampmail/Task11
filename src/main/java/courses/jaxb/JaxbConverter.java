@@ -11,17 +11,19 @@ import java.util.List;
 
 public class JaxbConverter {
 
-    public static void convertObjectToXml(List <Employer> employers) {
-        try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Employer.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+    public static void convertObjectToXml(List<Employer> employers) {
+        for (Employer empl : employers) {
+            try {
+                JAXBContext jaxbContext = JAXBContext.newInstance(Employer.class);
+                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+                jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-            jaxbMarshaller.marshal(employers, System.out);
-            jaxbMarshaller.marshal(employers, Main.JAXB_RESULT);
-        } catch (Exception e) {
-            e.printStackTrace();
+                jaxbMarshaller.marshal(employers, System.out);
+                jaxbMarshaller.marshal(employers, Main.JAXB_EMPLOYERS);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

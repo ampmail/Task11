@@ -16,7 +16,8 @@ import java.util.List;
 
 public class Main {
 
-    public static File JAXB_RESULT = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
+    public static File JAXB_DEPARTMENTS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
+    public static File JAXB_EMPLOYERS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
 
     public static void main(String[] args) throws SQLException {
 
@@ -52,14 +53,13 @@ public class Main {
 
             try {
 
-                File file = JAXB_RESULT;
                 JAXBContext jaxbContext = JAXBContext.newInstance(Department.class);
                 Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
                 // output pretty printed
                 jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-                jaxbMarshaller.marshal(department, file);
+                jaxbMarshaller.marshal(department, JAXB_DEPARTMENTS);
                 jaxbMarshaller.marshal(department, System.out);
 
             } catch (JAXBException e) {
