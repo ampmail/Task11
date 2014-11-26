@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<department id="86">
-    <name>Logistic</name>
-</department>
+<departmentsGroup>
+    <name>Departments Group</name>
+    <departments>
+        <id>155</id>
+        <name>Warehouse</name>
+    </departments>
+    <departments>
+        <id>156</id>
+        <name>Logistic</name>
+    </departments>
+</departmentsGroup>

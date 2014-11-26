@@ -1,31 +1,52 @@
 package courses.jaxb;
 
-import courses.entity.Employer;
+import courses.entity.DepartmentsGroup;
 import courses.service.Main;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import java.io.File;
-import java.util.List;
 
 public class JaxbConverter {
 
-    public static void convertObjectToXml(List<Employer> employers) {
-        for (Employer empl : employers) {
-            try {
-                JAXBContext jaxbContext = JAXBContext.newInstance(Employer.class);
-                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+    public static void convertDepartmentsToXml(DepartmentsGroup entity) {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(DepartmentsGroup.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-                jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-                jaxbMarshaller.marshal(employers, System.out);
-                jaxbMarshaller.marshal(employers, Main.JAXB_EMPLOYERS);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            jaxbMarshaller.marshal(entity, System.out);
+            jaxbMarshaller.marshal(entity, Main.JAXB_DEPARTMENTS);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+//
+//    public void marshallExample() {
+//        try {
+//            JAXBContext context = JAXBContext.newInstance(Department.class);
+//            Marshaller marshaller = context.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+//            marshaller.marshal(createJavaObjectExample1(), System.out);
+//        } catch (JAXBException exception) {
+//            Logger.getLogger(Application.class.getName()).
+//                    log(Level.SEVERE, "marshallExample threw JAXBException", exception);
+//        }
+//    }
+
+//
+//    public static void main(String[] argv) throws Exception {
+//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder builder = factory.newDocumentBuilder();
+//        DOMImplementation impl = builder.getDOMImplementation(); // более сложный, но и более гибкий способ создания документов
+//        Document doc = impl.createDocument(null, // namespaceURI
+//                null, // qualifiedName
+//                null); // doctype
+//        Element e1 = doc.createElement("api");
+//        doc.appendChild(e1);
+//        Element e2 = doc.createElement("java");
+//        e2.setAttribute("url", "http://www.quizful.net");
+//        e1.appendChild(e2);
+//    }
 
 //    public static <T> convertXmlToObject(File file) {
 //        T entity = new T();

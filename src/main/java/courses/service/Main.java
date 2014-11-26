@@ -2,22 +2,20 @@ package courses.service;
 
 import courses.dao.DepartmentDAO;
 import courses.dao.impl.DepartmentDAOImpl;
-import courses.dao.impl.EmployerDAOImpl;
 import courses.entity.Department;
-import courses.entity.Employer;
+import courses.entity.DepartmentsGroup;
 import courses.jaxb.JaxbConverter;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main {
 
     public static File JAXB_DEPARTMENTS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
-    public static File JAXB_EMPLOYERS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
+    public static File JAXB_EMPLOYERS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\employers.xml");
 
     public static void main(String[] args) throws SQLException {
 
@@ -35,45 +33,39 @@ public class Main {
                 System.out.println(dep);
             }
 
-            EmployerDAOImpl employerDAO = new EmployerDAOImpl();
-            Employer employer;
-            employer = new Employer(0L, "Jim", 33, "Jim@mail.dn", department.getId());
-            employerDAO.create(employer);
-            employer = new Employer(0L, "Tim", 31, "Tim@gmail.com", department.getId());
-            employerDAO.create(employer);
-            employer = new Employer(0L, "Bim", 43, "Bim@mail.dn", department.getId());
-            employerDAO.create(employer);
+//            EmployerDAOImpl employerDAO = new EmployerDAOImpl();
+//            Employer employer;
+//            employer = new Employer(0L, "Jim", 33, "Jim@mail.dn", department.getId());
+//            employerDAO.create(employer);
+//            employer = new Employer(0L, "Tim", 31, "Tim@gmail.com", department.getId());
+//            employerDAO.create(employer);
+//            employer = new Employer(0L, "Bim", 43, "Bim@mail.dn", department.getId());
+//            employerDAO.create(employer);
+//
+//            System.out.println("-- All employers --");
+//            List<Employer> empList = employerDAO.readAll();
+//            for (Employer empl : empList) {
+//                System.out.println(empl);
+//            }
 
-            System.out.println("-- All employers --");
-            List<Employer> empList = employerDAO.readAll();
-            for (Employer empl : empList) {
-                System.out.println(empl);
+            DepartmentsGroup group = new DepartmentsGroup();
+            group.setName("Departments Group");
+            for (Department dep : depList) {
+                try {
+                    group.getDepartments().add(dep);
+                } catch (Exception exception) {
+                    Logger.getLogger(Main.class.getName()).
+                            log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
+                }
             }
-            JaxbConverter.convertObjectToXml(empList);
-
-            try {
-
-                JAXBContext jaxbContext = JAXBContext.newInstance(Department.class);
-                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-                // output pretty printed
-                jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-                jaxbMarshaller.marshal(department, JAXB_DEPARTMENTS);
-                jaxbMarshaller.marshal(department, System.out);
-
-            } catch (JAXBException e) {
-                e.printStackTrace();
-            }
+            JaxbConverter.convertDepartmentsToXml(group);
 
 
-
-
-            System.out.println("-- Delete all employers --");
-            empList = employerDAO.readAll();
-            for (Employer empl : empList) {
-                employerDAO.delete(empl.getId());
-            }
+//            System.out.println("-- Delete all employers --");
+//            empList = employerDAO.readAll();
+//            for (Employer empl : empList) {
+//                employerDAO.delete(empl.getId());
+//            }
 
             System.out.println("-- Delete all Departments --");
             depList = departmentDAO.readAll();
