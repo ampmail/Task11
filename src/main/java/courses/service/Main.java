@@ -30,11 +30,11 @@ public class Main {
             department.setName("Logistic");
             departmentDAO.create(department);
 
-            System.out.println("-- All Departments --");
+//            System.out.println("-- All Departments --");
             List<Department> depList = departmentDAO.readAll();
-            for (Department dep : depList) {
-                System.out.println(dep);
-            }
+//            for (Department dep : depList) {
+//                System.out.println(dep);
+//            }
 
             EmployerDAOImpl employerDAO = new EmployerDAOImpl();
             Employer employer;
@@ -45,11 +45,11 @@ public class Main {
             employer = new Employer(0L, "Bim", 43, "Bim@mail.dn", department.getId());
             employerDAO.create(employer);
 
-            System.out.println("-- All employers --");
+//            System.out.println("-- All employers --");
             List<Employer> empList = employerDAO.readAll();
-            for (Employer empl : empList) {
-                System.out.println(empl);
-            }
+//            for (Employer empl : empList) {
+//                System.out.println(empl);
+//            }
 
             DepartmentsGroup group = new DepartmentsGroup();
             group.setName("Departments Group");

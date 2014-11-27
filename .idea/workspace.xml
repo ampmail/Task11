@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30657d8a-2641-4c50-bcfa-119c57b59862" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/courses/entity/EmployersGroup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/employers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/entity/Department.java" afterPath="$PROJECT_DIR$/src/main/java/courses/entity/Department.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/entity/Employer.java" afterPath="$PROJECT_DIR$/src/main/java/courses/entity/Employer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" afterPath="$PROJECT_DIR$/src/main/java/courses/jaxb/JaxbConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/courses/service/Main.java" afterPath="$PROJECT_DIR$/src/main/java/courses/service/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/department.xml" afterPath="$PROJECT_DIR$/src/main/resources/department.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/employers.xml" afterPath="$PROJECT_DIR$/src/main/resources/employers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Task11.iws" />
@@ -73,28 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="department.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/department.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/courses/service/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="2002">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employers.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/employers.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736">
+            <state line="37" column="0" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.51714003" vertical-offset="0" max-vertical-offset="2002">
               <folding />
             </state>
           </provider>
@@ -803,7 +781,7 @@
       <workItem from="1416866951123" duration="1297000" />
       <workItem from="1416899156210" duration="1617000" />
       <workItem from="1417015043135" duration="12665000" />
-      <workItem from="1417115508364" duration="2671000" />
+      <workItem from="1417115508364" duration="2921000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1416347795039</created>
@@ -813,18 +791,22 @@
       <created>1417038129769</created>
       <updated>1417038129769</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="jaxb: DepartmentsGroup &amp; EmployersGroup marshalling&#10;">
+      <created>1417118542744</created>
+      <updated>1417118542744</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33372000" />
+    <option name="totallyTimeSpent" value="33622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -843,7 +825,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16187434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2722063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2722063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2683706" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="619" y="95" width="1266" height="976" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -867,7 +849,8 @@
     </option>
     <MESSAGE value="Initial commit&#10;" />
     <MESSAGE value="jaxb: DepartmentsGroup marshalling" />
-    <option name="LAST_COMMIT_MESSAGE" value="jaxb: DepartmentsGroup marshalling" />
+    <MESSAGE value="jaxb: DepartmentsGroup &amp; EmployersGroup marshalling&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="jaxb: DepartmentsGroup &amp; EmployersGroup marshalling&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1192,13 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/department.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/courses/entity/DepartmentsGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616">
@@ -1267,16 +1243,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/courses/service/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/employers.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="2002">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/employers.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/department.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/courses/service/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.51714003" vertical-offset="0" max-vertical-offset="2002">
           <folding />
         </state>
       </provider>
