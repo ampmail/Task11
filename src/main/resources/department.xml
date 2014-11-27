@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <departmentsGroup>
     <name>Departments Group</name>
-    <departments>
-        <id>155</id>
+    <departments id="169">
         <name>Warehouse</name>
     </departments>
-    <departments>
-        <id>156</id>
+    <departments id="170">
         <name>Logistic</name>
     </departments>
 </departmentsGroup>

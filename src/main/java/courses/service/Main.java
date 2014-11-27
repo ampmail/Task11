@@ -2,8 +2,11 @@ package courses.service;
 
 import courses.dao.DepartmentDAO;
 import courses.dao.impl.DepartmentDAOImpl;
+import courses.dao.impl.EmployerDAOImpl;
 import courses.entity.Department;
 import courses.entity.DepartmentsGroup;
+import courses.entity.Employer;
+import courses.entity.EmployersGroup;
 import courses.jaxb.JaxbConverter;
 
 import java.io.File;
@@ -33,20 +36,20 @@ public class Main {
                 System.out.println(dep);
             }
 
-//            EmployerDAOImpl employerDAO = new EmployerDAOImpl();
-//            Employer employer;
-//            employer = new Employer(0L, "Jim", 33, "Jim@mail.dn", department.getId());
-//            employerDAO.create(employer);
-//            employer = new Employer(0L, "Tim", 31, "Tim@gmail.com", department.getId());
-//            employerDAO.create(employer);
-//            employer = new Employer(0L, "Bim", 43, "Bim@mail.dn", department.getId());
-//            employerDAO.create(employer);
-//
-//            System.out.println("-- All employers --");
-//            List<Employer> empList = employerDAO.readAll();
-//            for (Employer empl : empList) {
-//                System.out.println(empl);
-//            }
+            EmployerDAOImpl employerDAO = new EmployerDAOImpl();
+            Employer employer;
+            employer = new Employer(0L, "Jim", 33, "Jim@mail.dn", department.getId());
+            employerDAO.create(employer);
+            employer = new Employer(0L, "Tim", 31, "Tim@gmail.com", department.getId());
+            employerDAO.create(employer);
+            employer = new Employer(0L, "Bim", 43, "Bim@mail.dn", department.getId());
+            employerDAO.create(employer);
+
+            System.out.println("-- All employers --");
+            List<Employer> empList = employerDAO.readAll();
+            for (Employer empl : empList) {
+                System.out.println(empl);
+            }
 
             DepartmentsGroup group = new DepartmentsGroup();
             group.setName("Departments Group");
@@ -60,12 +63,24 @@ public class Main {
             }
             JaxbConverter.convertDepartmentsToXml(group);
 
+            EmployersGroup emplGroup = new EmployersGroup();
+            emplGroup.setName("Departments Group");
+            for (Employer empl : empList) {
+                try {
+                    emplGroup.getEmployers().add(empl);
+                } catch (Exception exception) {
+                    Logger.getLogger(Main.class.getName()).
+                            log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
+                }
+            }
+            JaxbConverter.convertEmployersToXml(emplGroup);
 
-//            System.out.println("-- Delete all employers --");
-//            empList = employerDAO.readAll();
-//            for (Employer empl : empList) {
-//                employerDAO.delete(empl.getId());
-//            }
+
+            System.out.println("-- Delete all employers --");
+            empList = employerDAO.readAll();
+            for (Employer empl : empList) {
+                employerDAO.delete(empl.getId());
+            }
 
             System.out.println("-- Delete all Departments --");
             depList = departmentDAO.readAll();

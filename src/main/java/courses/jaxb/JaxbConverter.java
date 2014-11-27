@@ -1,6 +1,7 @@
 package courses.jaxb;
 
 import courses.entity.DepartmentsGroup;
+import courses.entity.EmployersGroup;
 import courses.service.Main;
 
 import javax.xml.bind.JAXBContext;
@@ -20,18 +21,20 @@ public class JaxbConverter {
             e.printStackTrace();
         }
     }
-//
-//    public void marshallExample() {
-//        try {
-//            JAXBContext context = JAXBContext.newInstance(Department.class);
-//            Marshaller marshaller = context.createMarshaller();
-//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-//            marshaller.marshal(createJavaObjectExample1(), System.out);
-//        } catch (JAXBException exception) {
-//            Logger.getLogger(Application.class.getName()).
-//                    log(Level.SEVERE, "marshallExample threw JAXBException", exception);
-//        }
-//    }
+
+    public static void convertEmployersToXml(EmployersGroup entity) {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance (EmployersGroup.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            jaxbMarshaller.marshal(entity, System.out);
+            jaxbMarshaller.marshal(entity, Main.JAXB_EMPLOYERS);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 //
 //    public static void main(String[] argv) throws Exception {

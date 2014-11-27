@@ -3,8 +3,10 @@ package courses.entity;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement
+@XmlType(propOrder = { "id", "name", "age", "e_mail", "department_id"}, name = "employer")
+//@XmlRootElement
 public class Employer {
 
     private Long id;
