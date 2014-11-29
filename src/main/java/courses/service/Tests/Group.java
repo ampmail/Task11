@@ -1,5 +1,7 @@
 package courses.service.Tests;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
@@ -20,6 +22,8 @@ public class Group {
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "members")
+    @XmlElement(name = "person")
     public List<Person> getMembers() {
         return members;
     }

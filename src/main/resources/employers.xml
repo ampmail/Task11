@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<employersGroup>
-    <name>Departments Group</name>
-    <employers id="111">
-        <name>Jim</name>
-        <age>33</age>
-        <e_mail>Jim@mail.dn</e_mail>
-        <department_id>174</department_id>
-    </employers>
-    <employers id="112">
-        <name>Tim</name>
-        <age>31</age>
-        <e_mail>Tim@gmail.com</e_mail>
-        <department_id>174</department_id>
-    </employers>
-    <employers id="113">
-        <name>Bim</name>
-        <age>43</age>
-        <e_mail>Bim@mail.dn</e_mail>
-        <department_id>174</department_id>
-    </employers>
-</employersGroup>
+<employersInDepartmentsGroup>
+    <members>
+        <employer id="147">
+            <name>Jim</name>
+            <age>33</age>
+            <e_mail>Jim@mail.dn</e_mail>
+            <department_id>198</department_id>
+        </employer>
+        <employer id="148">
+            <name>Tim</name>
+            <age>31</age>
+            <e_mail>Tim@gmail.com</e_mail>
+            <department_id>198</department_id>
+        </employer>
+        <employer id="149">
+            <name>Bim</name>
+            <age>43</age>
+            <e_mail>Bim@mail.dn</e_mail>
+            <department_id>197</department_id>
+        </employer>
+    </members>
+    <departments id="197">
+        <name>Warehouse</name>
+    </departments>
+    <departments id="197">
+        <name>Warehouse</name>
+    </departments>
+    <departments id="197">
+        <name>Warehouse</name>
+    </departments>
+</employersInDepartmentsGroup>

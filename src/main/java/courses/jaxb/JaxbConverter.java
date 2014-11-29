@@ -2,7 +2,8 @@ package courses.jaxb;
 
 import courses.entity.DepartmentsGroup;
 import courses.entity.EmployersGroup;
-import courses.service.Main;
+import courses.entity.EmployersInDepartmentsGroup;
+import courses.service.StartMain;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -16,7 +17,7 @@ public class JaxbConverter {
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             jaxbMarshaller.marshal(entity, System.out);
-            jaxbMarshaller.marshal(entity, Main.JAXB_DEPARTMENTS);
+            jaxbMarshaller.marshal(entity, StartMain.JAXB_DEPARTMENTS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,7 +30,20 @@ public class JaxbConverter {
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             jaxbMarshaller.marshal(entity, System.out);
-            jaxbMarshaller.marshal(entity, Main.JAXB_EMPLOYERS);
+            jaxbMarshaller.marshal(entity, StartMain.JAXB_EMPLOYERS);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void convertEmployersAndDepartmentsToXml(EmployersInDepartmentsGroup entity) {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance (EmployersInDepartmentsGroup.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            jaxbMarshaller.marshal(entity, System.out);
+            jaxbMarshaller.marshal(entity, StartMain.JAXB_EMPLOYERS);
         } catch (Exception e) {
             e.printStackTrace();
         }

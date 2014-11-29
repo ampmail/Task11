@@ -1,15 +1,39 @@
 package courses.service.Tests;
 
-import javax.xml.bind.annotation.XmlType;
 import java.util.Date;
 
-@XmlType(propOrder = { "lastName", "firstName", "birthDate" }, name = "person")
-public class Person {
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+@XmlType(propOrder = { "lastName", "firstName", "birthDate", "type" }, name = "person")
+public class Person {
     private Date birthDate;
     private String firstName;
     private String lastName;
+    private PersonType type;
+    @XmlAttribute(name = "active")
+    private Status status = Status.PENDING_APPROVAL;
 
+    public PersonType getType() {
+        return type;
+    }
+
+    public void setType(PersonType type) {
+        this.type = type;
+    }
+
+    public Person delete() {
+        status = Status.INACTIVE;
+        return this;
+    }
+
+    public Person approve() {
+        status = Status.ACTIVE;
+        return this;
+    }
+
+    @XmlJavaTypeAdapter(ShortDateFormatter.class)
     public Date getBirthDate() {
         return birthDate;
     }

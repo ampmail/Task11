@@ -1,11 +1,13 @@
 package courses.entity;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlType(propOrder = { "name", "departments" }, name = "group")
+@XmlType(propOrder = { "name", "departments" }, name = "group1")
 @XmlRootElement
 public class DepartmentsGroup {
 
@@ -20,6 +22,8 @@ public class DepartmentsGroup {
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "departments")
+    @XmlElement(name = "department_id")
     public List<Department> getDepartments() {
         return departments;
     }
