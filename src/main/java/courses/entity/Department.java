@@ -1,10 +1,5 @@
 package courses.entity;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-
-//@XmlType(propOrder = { "id", "name"}, name = "department")
 public class Department {
 
     private Long id;
@@ -22,7 +17,6 @@ public class Department {
         return id;
     }
 
-    @XmlAttribute
     public void setId(Long id) {
         this.id = id;
     }
@@ -31,7 +25,6 @@ public class Department {
         return name;
     }
 
-    @XmlElement
     public void setName(String name) {
         this.name = name;
     }

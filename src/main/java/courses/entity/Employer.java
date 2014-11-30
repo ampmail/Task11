@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(propOrder = { "id", "name", "age", "e_mail", "department_id"}, name = "employer")
-//@XmlRootElement
+@XmlRootElement
 public class Employer {
 
     private Long id;

@@ -1,5 +1,9 @@
-package courses.entity;
+package courses.jaxb;
 
+import courses.entity.Employer;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
@@ -20,6 +24,8 @@ public class EmployersGroup {
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "employers")
+    @XmlElement(name = "employer")
     public List<Employer> getEmployers() {
         return employers;
     }

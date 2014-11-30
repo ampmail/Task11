@@ -4,6 +4,7 @@ import courses.dao.DepartmentDAO;
 import courses.dao.impl.DepartmentDAOImpl;
 import courses.dao.impl.EmployerDAOImpl;
 import courses.entity.*;
+import courses.jaxb.EmployersGroup;
 import courses.jaxb.JaxbConverter;
 
 import java.io.File;
@@ -14,8 +15,7 @@ import java.util.logging.Logger;
 
 public class StartMain {
 
-    public static File JAXB_DEPARTMENTS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\department.xml");
-    public static File JAXB_EMPLOYERS = new File("D:\\Dropbox\\Public\\Java\\Task11\\src\\main\\resources\\employers.xml");
+    public static File JAXB_EMPLOYERS = new File(".\\src\\main\\resources\\employers.xml");
 
     public static void main(String[] args) throws SQLException {
 
@@ -28,59 +28,35 @@ public class StartMain {
             departmentLg.setName("Logistic");
             departmentDAO.create(departmentLg);
 
-//            System.out.println("-- All Departments --");
+            System.out.println("-- All Departments --");
             List<Department> depList = departmentDAO.readAll();
-//            for (Department dep : depList) {
-//                System.out.println(dep);
-//            }
+            for (Department dep : depList) {
+                System.out.println(dep);
+            }
 
             EmployerDAOImpl employerDAO = new EmployerDAOImpl();
             employerDAO.create(new Employer(0L, "Jim", 33, "Jim@mail.dn", departmentLg.getId()));
             employerDAO.create(new Employer(0L, "Tim", 31, "Tim@gmail.com", departmentLg.getId()));
             employerDAO.create(new Employer(0L, "Bim", 43, "Bim@mail.dn", departmentWh.getId()));
 
-//            System.out.println("-- All employers --");
+            System.out.println("-- All employers --");
             List<Employer> empList = employerDAO.readAll();
-//            for (Employer empl : empList) {
-//                System.out.println(empl);
-//            }
+            for (Employer empl : empList) {
+                System.out.println(empl);
+            }
 
-            DepartmentsGroup group = new DepartmentsGroup();
-            group.setName("Departments Group");
-            for (Department dep : depList) {
+            EmployersGroup emplGroup = new EmployersGroup();
+            emplGroup.setName("EmployersGroup Group");
+            for (Employer empl : empList) {
                 try {
-                    group.getDepartments().add(dep);
+                    emplGroup.getEmployers().add(empl);
                 } catch (Exception exception) {
                     Logger.getLogger(StartMain.class.getName()).
                             log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
                 }
             }
-            JaxbConverter.convertDepartmentsToXml(group);
+            JaxbConverter.convertEmployersToXml(emplGroup);
 
-//            EmployersGroup emplGroup = new EmployersGroup();
-//            emplGroup.setName("Departments Group");
-//            for (Employer empl : empList) {
-//                try {
-//                    emplGroup.getEmployers().add(empl);
-//                } catch (Exception exception) {
-//                    Logger.getLogger(StartMain.class.getName()).
-//                            log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
-//                }
-//            }
-//            JaxbConverter.convertEmployersToXml(emplGroup);
-
-//            EmployersInDepartmentsGroup emplAndDepGroup = new EmployersInDepartmentsGroup();
-//            emplAndDepGroup.setName("Employers In Departments Group");
-//            for (Employer empl : empList) {
-//                try {
-//                    emplAndDepGroup.getEmployers().add(empl);
-//                    emplAndDepGroup.getDepartments().add(departmentWh);
-//                } catch (Exception exception) {
-//                    Logger.getLogger(StartMain.class.getName()).
-//                            log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
-//                }
-//            }
-//            JaxbConverter.convertEmployersAndDepartmentsToXml(emplAndDepGroup);
 
             System.out.println("-- Delete all employers --");
             empList = employerDAO.readAll();

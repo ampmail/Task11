@@ -1,4 +1,4 @@
-package courses.service.Tests;
+package courses.service.Samples;
 
 import javax.xml.bind.annotation.XmlEnumValue;
 
