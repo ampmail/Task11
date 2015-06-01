@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class StartMain {
+public class Main {
 
     public static File JAXB_EMPLOYERS = new File(".\\src\\main\\resources\\employers.xml");
 
@@ -46,16 +46,17 @@ public class StartMain {
             }
 
             EmployersGroup emplGroup = new EmployersGroup();
-            emplGroup.setName("EmployersGroup Group");
+            emplGroup.setName("EmployersGroup First");
             for (Employer empl : empList) {
                 try {
                     emplGroup.getEmployers().add(empl);
                 } catch (Exception exception) {
-                    Logger.getLogger(StartMain.class.getName()).
+                    Logger.getLogger(Main.class.getName()).
                             log(Level.ALL, "createJavaObjectExample1 threw ParseException", exception);
                 }
             }
-            JaxbConverter.convertEmployersToXml(emplGroup);
+
+            JaxbConverter.convertEmployersGroupToXml(emplGroup);
 
 
             System.out.println("-- Delete all employers --");

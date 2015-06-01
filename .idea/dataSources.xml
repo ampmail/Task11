@@ -6,10 +6,7 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/company</jdbc-url>
-      <user-name>admin</user-name>
-      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
       <libraries />
     </data-source>
   </component>
 </project>
-
